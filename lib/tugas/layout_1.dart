@@ -6,66 +6,60 @@ class LayoutFlutter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text("Have a nice day", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-        child: Column(
+        child: Row(
+          spacing: 15,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            Row(
-              children: [
-                Text("Good Morning,", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
-                SizedBox(width: 5,),
-                Text("Alex", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black.withOpacity(0.30)),),
-              ],
-            ),
-            SizedBox(height: 20,),
-            Row(
-              children: [
-                Expanded(
-                  child: Column(
-                      children: [
-                        Container(
-                          height: 215,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            gradient: LinearGradient(
-                              colors: [
-                                 Color(0xFF6366F1),
-                                 Color(0xFF4338CA),
-                              ],
-                              begin: Alignment.topLeft,
-                              end: Alignment.bottomRight
-                            )
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 20),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text("Earnings", style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),),
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 20),
-                                  child: Text("\$8,350", style: TextStyle(fontSize: 30, color: Colors.white, fontWeight: FontWeight.w500),),
-                                ),
-                                Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 9.0, vertical: 6.0),
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(15.0),
-                                    color: Colors.black.withOpacity(0.08)
-                                  ),
-                                  child: Text("+ 10% since last month", style: TextStyle(fontSize: 12, color: Colors.white, fontWeight: FontWeight.w500),),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
+            Expanded(
+              child: Column(
+                children: [
+                  Container(
+                    height: 215,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      gradient: LinearGradient(
+                        colors: [
+                           Color(0xFF6366F1),
+                           Color(0xFF4338CA),
+                        ],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight
+                      )
                     ),
-                ),
-                SizedBox(width: 10,),
-                Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Earnings", style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 20),
+                            child: Text("\$8,350", style: TextStyle(fontSize: 30, color: Colors.white, fontWeight: FontWeight.w500),),
+                          ),
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 9.0, vertical: 6.0),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15.0),
+                              color: Colors.black.withOpacity(0.08)
+                            ),
+                            child: Text("+ 10% since last month", style: TextStyle(fontSize: 12, color: Colors.white, fontWeight: FontWeight.w500),),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
               child: Column(
                 spacing: 15,
                 children: [
@@ -178,11 +172,9 @@ class LayoutFlutter extends StatelessWidget {
                 ],
               ),
             ),
-              ],
-            ),
           ],
         ),
-      ),
+      )
     );
   }
 }
