@@ -150,7 +150,7 @@ class LayoutFlutter extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.only(top: 10),
                           child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Container(
@@ -161,6 +161,7 @@ class LayoutFlutter extends StatelessWidget {
                                 ),
                                 child: Text("mobile app", style: TextStyle(fontSize: 12, color: Colors.black54, fontWeight: FontWeight.w500),),
                               ),
+                              SizedBox(width: 10,),
                               Container(
                                 padding: const EdgeInsets.symmetric(horizontal: 9.0, vertical: 6.0),
                                 decoration: BoxDecoration(
