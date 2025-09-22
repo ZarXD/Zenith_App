@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:zenith_app/latihan/stack_layout.dart';
+import 'package:zenith_app/tugas/layout_2.dart';
+// import 'package:zenith_app/latihan/stack_layout.dart';
 // import 'package:zenith_app/latihan/stack.dart';
 // import 'package:zenith_app/latihan/expanded.dart';
 // import 'package:zenith_app/latihan/image.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: StackLayout(),
+      home: LayoutStack(),
     );
   }
 }
