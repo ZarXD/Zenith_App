@@ -10,7 +10,6 @@ class LayoutStack extends StatelessWidget {
         width: double.infinity,
         height: double.infinity,
         child: Stack(
-          // clipBehavior: Clip.hardEdge,
           children: [
             Container(
               width: double.infinity,
