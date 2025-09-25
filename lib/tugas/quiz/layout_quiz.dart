@@ -16,45 +16,112 @@ class QuizLayout extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Training", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+                Text(
+                  "Training",
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
                 Row(
                   children: [
-                    Icon(Icons.arrow_back_ios_new, size: 16,),
-                    Icon(Icons.calendar_month, size: 16,),
-                    Icon(Icons.arrow_forward_ios, size: 16,),
+                    Icon(Icons.arrow_back_ios_new, size: 16),
+                    Icon(Icons.calendar_month, size: 16),
+                    Icon(Icons.arrow_forward_ios, size: 16),
                   ],
-                )
-              ]
+                ),
+              ],
             ),
             SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Your Program", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+                Text(
+                  "Your Program",
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
                 Row(
                   children: [
-                    Text("Details", style: TextStyle(color: Colors.blue, fontSize: 16, fontWeight: FontWeight.bold),),
-                    Icon(Icons.arrow_forward_ios, color: Colors.blue, size: 16,)
+                    Text(
+                      "Details",
+                      style: TextStyle(
+                        color: Colors.blue,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Icon(Icons.arrow_forward_ios, color: Colors.blue, size: 16),
                   ],
-                )
-              ]
+                ),
+              ],
             ),
             SizedBox(height: 20),
             Container(
               width: double.infinity,
               height: 180,
               decoration: BoxDecoration(
-                borderRadius: BorderRadiusDirectional.circular(30),
+                borderRadius: BorderRadiusDirectional.circular(20),
                 gradient: LinearGradient(
-                  colors: [
-                    Colors.purpleAccent,
-                    Colors.purpleAccent.withOpacity(0.7),
-                  ],
+                  colors: [Colors.purple, Colors.purple.withOpacity(0.4)],
                   begin: Alignment.centerLeft,
                   end: Alignment.centerRight,
                 ),
               ),
-              child: Column(),
+              child: Padding(
+                padding: const EdgeInsets.only(
+                  top: 20,
+                  left: 20,
+                  right: 20,
+                  bottom: 10,
+                ),
+                child: Stack(
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Next Workout",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        Text(
+                          "Lets Toning",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          "and Glutes Workout",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 35),
+                        Row(
+                          children: [
+                            Icon(Icons.timer, size: 16, color: Colors.white),
+                            Text(
+                              "60 min",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    Align(
+                      alignment: Alignment(1, 1),
+                      child: Icon(
+                        Icons.play_circle,
+                        size: 35,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ),
             SizedBox(height: 20),
             Stack(
