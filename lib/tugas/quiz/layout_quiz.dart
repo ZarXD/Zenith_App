@@ -6,7 +6,11 @@ class QuizLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text("Quiz Layout"),
+        backgroundColor: Colors.indigoAccent,
+        foregroundColor: Colors.white,
+      ),
       backgroundColor: Colors.grey.withOpacity(0.1),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -134,15 +138,32 @@ class QuizLayout extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-              child: Row(
+              child: Stack(
                 children: [
                   Container(
-                    width: 70,
-                    height: 80,
+                    width: 100,
+                    height: 100,
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage("images/figure1.png"),
                       ),
+                    ),
+                  ),
+                  Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "You are doing great",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text("keep it up"),
+                        Text("stick to your plan"),
+                      ],
                     ),
                   ),
                 ],
