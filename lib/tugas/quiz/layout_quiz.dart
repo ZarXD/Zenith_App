@@ -13,13 +13,36 @@ class QuizLayout extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(children: [Text("Training")]),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("Training", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+                Row(
+                  children: [
+                    Icon(Icons.arrow_back_ios_new, size: 16,),
+                    Icon(Icons.calendar_month, size: 16,),
+                    Icon(Icons.arrow_forward_ios, size: 16,),
+                  ],
+                )
+              ]
+            ),
             SizedBox(height: 20),
-            Row(children: [Text("Your Program"), Text("Details")]),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("Your Program", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+                Row(
+                  children: [
+                    Text("Details", style: TextStyle(color: Colors.blue, fontSize: 16, fontWeight: FontWeight.bold),),
+                    Icon(Icons.arrow_forward_ios, color: Colors.blue, size: 16,)
+                  ],
+                )
+              ]
+            ),
             SizedBox(height: 20),
             Container(
               width: double.infinity,
-              height: 200,
+              height: 180,
               decoration: BoxDecoration(
                 borderRadius: BorderRadiusDirectional.circular(30),
                 gradient: LinearGradient(
@@ -31,18 +54,29 @@ class QuizLayout extends StatelessWidget {
                   end: Alignment.centerRight,
                 ),
               ),
+              child: Column(),
             ),
             SizedBox(height: 20),
             Stack(
               children: [
                 Container(
                   width: double.infinity,
-                  height: 100,
+                  height: 80,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     image: DecorationImage(
                       image: AssetImage("images/card.jpg"),
-                      fit: BoxFit.cover                    
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Container(
+                  alignment: Alignment.topLeft,
+                  width: double.infinity,
+                  height: 70,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("images/figure1.png"),
                     ),
                   ),
                 ),
@@ -59,7 +93,9 @@ class QuizLayout extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.white,
-                      image: DecorationImage(image: AssetImage("images/ex3.png")),
+                      image: DecorationImage(
+                        image: AssetImage("images/ex3.png"),
+                      ),
                     ),
                   ),
                 ),
@@ -71,7 +107,9 @@ class QuizLayout extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.white,
-                      image: DecorationImage(image: AssetImage("images/ex4.png")),
+                      image: DecorationImage(
+                        image: AssetImage("images/ex4.png"),
+                      ),
                     ),
                   ),
                 ),
