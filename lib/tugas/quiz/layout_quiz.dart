@@ -124,33 +124,36 @@ class QuizLayout extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            Stack(
-              children: [
-                Container(
-                  width: double.infinity,
-                  height: 80,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    image: DecorationImage(
-                      image: AssetImage("images/card.jpg"),
-                      fit: BoxFit.cover,
+            Container(
+              width: double.infinity,
+              height: 80,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                image: DecorationImage(
+                  image: AssetImage("images/card.jpg"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+              child: Row(
+                children: [
+                  Container(
+                    width: 70,
+                    height: 80,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage("images/figure1.png"),
+                      ),
                     ),
                   ),
-                ),
-                Container(
-                  alignment: Alignment.topLeft,
-                  width: double.infinity,
-                  height: 70,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage("images/figure1.png"),
-                    ),
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
             SizedBox(height: 20),
-            Text("Area of Focus"),
+            Text(
+              "Area of Focus",
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 5),
             Row(
               children: [
                 Expanded(
