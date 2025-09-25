@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:zenith_app/tugas/layout_2.dart';
+import 'package:zenith_app/latihan/navigation/page_1.dart';
+import 'package:zenith_app/latihan/navigation/page_2.dart';
+import 'package:zenith_app/tugas/quiz/layout_quiz.dart';
+// import 'package:zenith_app/tugas/layout_2.dart';
 // import 'package:zenith_app/latihan/stack_layout.dart';
 // import 'package:zenith_app/latihan/stack.dart';
 // import 'package:zenith_app/latihan/expanded.dart';
@@ -22,7 +25,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LayoutStack(),
+      // routes: {
+      //   "/" :(context)=>Page1(),
+      //   "/halaman2" :(context)=>Page2(),
+      // },
+      // initialRoute: "/",
+      home: QuizLayout(),
     );
   }
 }
