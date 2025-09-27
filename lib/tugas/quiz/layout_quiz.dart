@@ -61,7 +61,12 @@ class QuizLayout extends StatelessWidget {
               width: double.infinity,
               height: 180,
               decoration: BoxDecoration(
-                borderRadius: BorderRadiusDirectional.circular(20),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20),
+                  topRight: Radius.circular(100),
+                  bottomLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(20),
+                ),
                 gradient: LinearGradient(
                   colors: [Colors.purple, Colors.purple.withOpacity(0.4)],
                   begin: Alignment.centerLeft,
