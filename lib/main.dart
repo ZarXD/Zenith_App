@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:zenith_app/latihan/form/text_box.dart';
 // import 'package:zenith_app/latihan/list/list_1.dart';
-import 'package:zenith_app/latihan/list/list_2.dart';
+// import 'package:zenith_app/latihan/list/list_2.dart';
 // import 'package:zenith_app/latihan/state/state_1.dart';
 // import 'package:zenith_app/tugas/quiz/layout_quiz.dart';
 // import 'package:zenith_app/latihan/navigation/page_1.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
       //   "/halaman2" :(context)=>Page2(),
       // },
       // initialRoute: "/",
-      home: List2(),
+      home: TextBoxPage(),
     );
   }
 }
